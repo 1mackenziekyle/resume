@@ -1,0 +1,234 @@
+
+
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+\vspace*{-1.5cm}
+    \centerline{\includegraphics[width=\paperwidth]{head}}
+    \textbf{\Huge \scshape Kyle Mackenzie} \\ \vspace{1pt}
+    \href[pdfnewwindow=true]{https://1mackenziekyle.github.io/personal-website/#}{\underline{portfolio}} $|$
+    \href{mailto:1mackenziekyle@gmail.com}{\underline{1mackenziekyle@gmail.com}} $|$
+    \small \href{https://github.com/1mackenziekyle}{\underline{github.com/1mackenziekyle}} $|$
+    \href{https://www.linkedin.com/in/kyle-mackenzie-url/}{\underline{linkedin.com/in/kyle-mackenzie-url}} 
+   % $|$ \href{https://first.github.io/}{\underline{first.github.io}}
+    
+    
+\end{center}
+
+ 
+  
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Java, JavaScript, C++, Python, SQL,  HTML/CSS} \\
+     \textbf{Frameworks / Packages}{: React, MongoDB, Node.js, JUnit, NumPy {\&} Pandas, TensorFlow, Selenium} \\
+     \textbf{Tools/Environments}{: Git, Docker, MongoDB, Jupyter Notebooks} \\
+    }}
+ \end{itemize}
+ 
+    %-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of British Columbia}{Vancouver, BC}
+      {Engineering Physics - Bachelor of Applied Science}{Sep. 2020 - May 2025 (expected)}
+      \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Coursework}{: Software Design, Linear Circuits, Experimental Techniques, Multi-variable and Vector Calculus.} \\
+    }}
+ \end{itemize}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Relevant Experience}
+  \resumeSubHeadingListStart
+  \resumeSubheading
+      {Full-Stack Developer Co-op}{Jan. 2022 -- Apr. 2022}
+      {ICBC}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Produced automation solutions while improving development time by 50\% compared to company standard.}
+        \resumeItem{Developed prototype for automation of company process to reduce labour and resources spent and expedite results to customers.}
+        \resumeItem{Rapidly developed test cases for complex internal web application to minimize risk of bugs in production during upgrades, using economic and innovative architectural decisions.}
+        \resumeItem{Prototyped a 3D, gamified version of current ICBC Knowledge Practice Test to increase customer engagement and learning, and improve road safety.}
+      \resumeItemListEnd
+  \resumeSubheading
+      {Propulsion Testing Member}{Sep. 2021 -- Jan. 2022}
+      {UBC Rocket Student Design Team}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Operated test stand during cryogenic dress-rehearsal of engine hot-fire.}
+        \resumeItem{Accelerated schedule by 2 weeks by improving existing PLC and HMI software on engine test stand.}
+      \resumeItemListEnd
+
+
+    \resumeSubheading
+      {Front-End Developer}{May 2021 -- Sep. 2021}
+      {Charlene's Web Services}{Remote}
+      \resumeItemListStart
+        \resumeItem{Developed a slideshow application using JS, express.js, HTML/CSS for deployment on WordPress marketplace.}
+
+      \resumeItemListEnd
+      
+      
+    \resumeSubheading
+      {Embedded Systems Developer}{Jan. 2021 -- Sep. 2021}
+      {UBC Solar Student Design Team}{Vancouver, BC}
+      \resumeItemListStart
+        \resumeItem{Developed multi-threaded communication firmware for micro-controllers to communicate through serial, radio, and cellular for real-time data acquisition during solar car races.}
+        \resumeItem{Wrote documentation for embedded software algorithm to ensure complete understanding for future employees.}
+        
+      \resumeItemListEnd
+
+      
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Social Network Analysis Project}
+          $|$ \emph{3 person project - Java, Git, JUnit}
+          }{Oct. 2021}
+          \resumeItemListStart
+            \resumeItem{Developed a Graph data structure to represent relationships between co-workers from a company's email records.}
+            \resumeItem{Implemented methods for depth-first and breadth-first search, as well as finding the shortest path between 2 users.}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{Online To-Do List}
+          $|$ \emph{JavaScript, Node.js, Heroku, Express.js, MongoDB, HTML/CSS}
+          }{Aug. 2021}
+          \resumeItemListStart
+            \resumeItem{Developed a database-powered web application in Node.js front to back.}
+            \resumeItem{Implemented a MongoDB database to store users' lists locally for revisiting.}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Image Classifier} 
+          $|$ \emph{Python, TensorFlow, Google Colab Notebooks} 
+          }{Sep. 2020 -- Oct. 2020}
+          \resumeItemListStart
+            \resumeItem{Employed and trained a neural network to identify clothing items with over 90\% accuracy.}
+          \resumeItemListEnd
+          
+        %  \resumeItemListEnd
+         
+    \resumeSubHeadingListEnd
+
+%-------------INTERESTS--------------------
+\section{Interests}
+\resumeSubHeadingListStart
+    \small{Hiking \textbullet \ Robotics \textbullet \  Music Production \textbullet \ Web Design }
+\resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}
