@@ -1,0 +1,15 @@
+Dear Hiring Manager,
+
+I am excited to apply for the role of Student Assistant for the Machine Learning and Artificial Intelligence project that you have advertised. As a senior-level undergraduate student majoring in Engineering Physics at the University of British Columbia, I am confident that my skills and experience make me an ideal candidate for this position.
+
+My technical skills include expertise in programming languages such as Python, C/C++, Java, and JavaScript, as well as frameworks such as Tensorflow and PyTorch. Additionally, I am well-versed in data analysis tools like Numpy and Pandas, and I have experience with Git and Unix Command Line. I have also used data visualization tools such as Matplotlib and Seaborn to create effective visual representations of data.
+
+In my previous co-op and project experiences, I have developed automation solutions, developed prototype applications, and developed test cases. My experience also includes designing and prototyping hardware and software components for a treasure-hunting and line-following robot, and developing a Reinforcement Learning agent for self-driving with Deep-Q and Q-Learning. This experience has given me a solid foundation in developing software applications, problem-solving, and critical thinking.
+
+I am particularly interested in this project as I am passionate about the application of Machine Learning and Artificial Intelligence to solve real-world problems. I believe that this project will provide an excellent opportunity for me to hone my skills and contribute to the development of health-related models, including effective data visualization using Matplotlib and Seaborn.
+
+Thank you for considering my application. I look forward to the opportunity to discuss my qualifications further.
+
+Sincerely,
+
+[Your Name]
