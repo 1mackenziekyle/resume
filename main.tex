@@ -141,7 +141,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of British Columbia}{Vancouver, BC}
-      {Engineering Physics - Bachelor of Applied Science}{Sep. 2020 - May 2025 (expected)}
+      {Engineering Physics - Bachelor of Applied Science}{Sep. 2020 - May 2025 (Expected)}
       \begin{itemize}[leftmargin=0in, label={}]
     \small{\item{
      \textbf{Coursework}{: Software Design, Microcomputers, Signals and Systems, Machine Learning, Calculus, PDEs.} \\
@@ -156,31 +156,34 @@
       {Controls Systems Co-op}{September 2023 -- Present}
       {Corvus Energy}{Richmond, BC}
       \resumeItemListStart
-        \resumeItem{Facilitated hardware and software testing for safety-critical battery management systems.}
-        \resumeItem{Developed a thermal model of the pre-charge system of the battery pack to control the pre-charge current.}
-        \resumeItem{Added wiring and sensors to extend functionality of a hardware-in-the-loop test bench for the battery management system software.}
+        \resumeItem{Carried out unit tests for software and hardware functionality of battery management system.}
+        \resumeItem{Wrote automation scripts for unit testing on hardware-in-the-loop test bench for battery management system.}
+        \resumeItem{Developed a thermal model of the pre-charge system of the battery pack to control current while pre-charging.}
+        \resumeItem{Developed a coulomb-counting algorithm to validate the State-of-Charge estimation algorithm.}
+        \resumeItem{Designed and documented a process for collecting battery cell data for validation of SoC algorithm.}
+        \resumeItem{Added wiring and sensors to extend functionality of a hardware-in-the-loop test bench.}
       \resumeItemListEnd
   \resumeSubheading
       {Drivetrain Firmware Developer}{Sep. 2022 -- Present}
       {UBC Formula Electric}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Surveyed existing research on vehicle dynamics and torque vectoring algorithms to design a custom drive algorithm to control power limiting, an active software differential, and torque control for traction optimization.}
-        \resumeItem{Wrote embedded-C code on the STM32F1 board to implement the custom driving algorithm.}
-        \resumeItem{Developed and led execution of a plan to test, gather data on, and validate the torque vectoring algortihm performance across multiple test days.}
+        \resumeItem{Designed a custom torque vectoring algorithm based on existing research to control motor power and torque requests and optimize cornering speed and wheel slip conditions.}
+        \resumeItem{Implemented torque vectoring algorithm in C code on an STM32 microcontroller.}
+        \resumeItem{Led testing, validation, and data collection of the torque vectoring algortihm performance across multiple test days.}
       \resumeItemListEnd
     \resumeSubheading
-      {Research Assistant}{May 2023 -- Present}
+      {Research Assistant}{May 2023 -- Aug. 2023}
       {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Wrote a script in both Python and MATLAB to perform Constrained Principal Component Analysis on brain fMRI data, and extract functional brain network components.}
+        \resumeItem{Optimized an algorithm to perform Constrained Principal Component Analysis on brain fMRI data, and extract functional brain network components.}
       \resumeItemListEnd
   \resumeSubheading
       {Full-Stack Developer Co-op}{Jan. 2022 -- Apr. 2022}
       {ICBC}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Reduced scripting development time by 50\% using a novel web-scraping software library, Robot Framework.}
-        % \resumeItem{Developed prototype for automation of company process to reduce labour and resources spent and expedite results to customers.}
-        \resumeItem{Prototyped a 3D, gamified version of current ICBC Knowledge Practice Test to increase customer engagement.}
+        \resumeItem{Wrote automation scripts for data entry using Blue Prism framework}
+        \resumeItem{Developed prototype for automation of web form data entry using python-based libraries alternatively to the previously used internal tool, 
+        proving development time could be reduced by 50\%.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -188,25 +191,23 @@
 %-----------PROJECTS-----------
 \section{Technical Projects}
     \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Robot Design \& Fabrication}
-          $|$ \emph{4 person project - C/C++, OnShape}
-          }{Oct. 2021}
+        \resumeProjectHeading
+          {\textbf{Uni-wheeled Robot Drive Controls}
+          $|$ \emph{5-person Capstone project - MATLAB, Simulink}
+          }{Sept. 2023 -- Present}
           \resumeItemListStart
-            \resumeItem{Designed the CAD model, circuit boards, and wrote the firmware in C for a wheeled robot to navigate a course and collect objects as part of the ENPH 253 course.}
+            \resumeItem{Derived equations of motion for a single drive wheel robot and characterized as a linearized time-invariant system for our control algorithm.}
+            \resumeItem{Developed Simulink model to facilitate Software-in-the-Loop testing of our control model.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Autonomous Wheeled Robot}
+          $|$ \emph{4 person project - C/C++, OnShape}
+          }{May 2021 -- Aug. 2021}
+          \resumeItemListStart
+            \resumeItem{Designed the CAD model, circuit boards, and wrote the firmware in C for a wheeled robot to navigate a course to pick up items autonomously.}
             \resumeItem{Fabricated robot using sheet metal parts, laser-cut hardboard, and 3D-printed components.}
             \resumeItem{Assembled, soldered, and tested custom-designed printed circuit boards for power distribution and drive control.}
           \resumeItemListEnd
-          
-        \resumeProjectHeading
-          {\textbf{Rap-GPT}
-          $|$ \emph{Python, PyTorch}
-          }{Aug. 2021}
-          \resumeItemListStart
-            \resumeItem{Implemented a Generative Transformer machine learning model in PyTorch based on the design outlined in Google's research paper \emph{Attention is All You Need}.}
-            \resumeItem{Finetuned model to generate lyrics that rhyme and follow a specific style.}
-          \resumeItemListEnd
-         
     \resumeSubHeadingListEnd
 
 \end{document}
