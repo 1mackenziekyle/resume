@@ -12,6 +12,7 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
+\usepackage{multicol}
 \usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
@@ -117,7 +118,7 @@
     % \href[pdfnewwindow=true]{https://1mackenziekyle.github.io/personal-website/#}{\underline{portfolio}} $|$
     \href{mailto:1mackenziekyle@gmail.com}{\underline{1mackenziekyle@gmail.com}} $|$
     \small \href{https://github.com/1mackenziekyle}{\underline{github.com/1mackenziekyle}} $|$
-    \href{https://www.linkedin.com/in/kyle-mackenzie-url/}{\underline{linkedin.com/in/kyle-mackenzie-url}} 
+    \href{https://www.linkedin.com/in/kyle-mackenzie-url/}{\underline{linkedin.com/in/kyle-mackenzie-url}}  
    % $|$ \href{https://first.github.io/}{\underline{first.github.io}}
     
     
@@ -126,62 +127,77 @@
  
   
 %
-%-----------PROGRAMMING SKILLS-----------
+%----------- SKILLS -----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, C/C++, MATLAB, Erlang}\\
-     \textbf{Frameworks / Packages}{: OpenCV, ROS, Numpy, Pandas, Tensorflow, PyTorch, Matplotlib \& Seaborn} \\
-     \textbf{Tools/Environments}{: Git, Linux Command Line} \\
-    }}
- \end{itemize}
- 
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Software}{: Python, C/C++, MATLAB \& Simulink, Controls \& Modelling, Linux}\\
+%      \textbf{Controls}{: BMS modelling, State of Charge estimation} \\
+%      \textbf{Electrical}{: Analog circuits, PCB design} \\
+%      \textbf{Mechanical}{: Power Tools, Lathe \& Mill} \\
+%     }}
+%  \end{itemize}
+\begin{center}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
+        \textbf{Software} & \textbf{Controls} & \textbf{Electrical} & \textbf{Mechanical} \\
+        % Python  C/C++, MATLAB \& Simulink, Controls \& Modelling, Linux & BMS modelling, State of Charge estimation & Analog circuits, PCB design & Power Tools, Lathe \& Mill \\
+        Python, C/C++ & SOC Estimation & Fourier Anaylsis & CAD design \\
+        MATLAB, Simulink & Torque Vectoring & PCB design & Lathe \& Mill \\
+        Linux & Thermal Modelling & Soldering & Power Tools \\
+    \end{tabular*}
+\end{center}
+
+\vspace{-7mm}
+
     %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of British Columbia}{Vancouver, BC}
-      {Engineering Physics - Bachelor of Applied Science}{Sep. 2020 - May 2025 (Expected)}
-      \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{Coursework}{: Software Design, Microcomputers, Signals and Systems, Machine Learning, Calculus, PDEs.} \\
-    }}
- \end{itemize}
+      {Engineering Physics}{Sep. 2020 - May 2025 (Expected Graduation Date)}
+%       \begin{itemize}[leftmargin=0in, label={}]
+%     \small{\item{
+%      \textbf{Coursework}{: Software Design, Microcomputers, Signals and Systems, Machine Learning, Calculus, PDEs.} \\
+%     }}
+%  \end{itemize}
   \resumeSubHeadingListEnd
+
+\vspace{-3mm}
 
 %-----------EXPERIENCE-----------
 \section{Relevant Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Controls Systems Co-op}{September 2023 -- Present}
+      {Battery Controls Systems Co-op}{September 2023 -- Present}
       {Corvus Energy}{Richmond, BC}
       \resumeItemListStart
-        \resumeItem{Carried out unit tests for software and hardware functionality of battery management system.}
-        \resumeItem{Wrote automation scripts for unit testing on hardware-in-the-loop test bench for battery management system.}
-        \resumeItem{Developed a thermal model of the pre-charge system of the battery pack to control current while pre-charging.}
-        \resumeItem{Developed a coulomb-counting algorithm to validate the State-of-Charge estimation algorithm.}
-        \resumeItem{Designed and documented a process for collecting battery cell data for validation of SoC algorithm.}
-        \resumeItem{Added wiring and sensors to extend functionality of a hardware-in-the-loop test bench.}
+        \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
+        \resumeItem{Validated UKF (Unscented Kalman Filter) used in SOC (State of Charge) estimation algorithm.}
+        \resumeItem{Collected battery cell cycling data for SIL (software in the loop) testing of SOC algorithm.} 
+        \resumeItem{Developed coulomb-counting algorithm to validate SOC algorithm and track SOH (state of health) of cells.}
+        \resumeItem{Wrote automated test scripts in Python for the HIL (hardware in the loop) BMS test bench.}
+        \resumeItem{Added wiring and sensors to extend functionality and test coverage of automated HIL test bench.}
       \resumeItemListEnd
   \resumeSubheading
-      {Drive Controls Firmware Developer}{Sep. 2022 -- Present}
+      {Lead Drive Controls Firmware Developer}{Sep. 2022 -- Present}
       {UBC Formula Electric}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Designed a custom torque vectoring algorithm based on existing research to control motor power and torque requests and optimize cornering speed and wheel slip conditions.}
+        \resumeItem{Researched vehicle control algorithms and designed a custom torque vectoring motor control algorithm, increasing cornering speed and decreasing lap times by 10\%.}
         \resumeItem{Implemented torque vectoring algorithm in C code on an STM32 microcontroller.}
-        \resumeItem{Led testing, validation, and data collection of the torque vectoring algortihm's performance.}
+        \resumeItem{Led a team of Test Engineers to complete track setup, data collection, and safety marshalling during testing and validation of the torque vectoring algortihm's performance.}
       \resumeItemListEnd
     \resumeSubheading
       {Research Assistant}{May 2023 -- Aug. 2023}
       {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Optimized an algorithm to perform Constrained Principal Component Analysis on brain fMRI data, and extract functional brain network components.}
+        \resumeItem{Optimized a MATLAB implementation of CPCA, a regressive dimension-reduction algorithm, to handle GB of brain fMRI data, measuring brain activation and classifying functional brain networks.}
+        \resumeItem{Developed MATLAB report generation script to display and analyze results of algorithm. }
       \resumeItemListEnd
   \resumeSubheading
       {Full-Stack Developer Co-op}{Jan. 2022 -- Apr. 2022}
       {ICBC}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Wrote automation scripts for data entry using Blue Prism framework}
+        \resumeItem{Developed web form data entry automation scripts, saving the company 10h / month.}
         \resumeItem{Developed prototype for automation of web form data entry using python-based libraries alternatively to the previously used internal tool, 
         proving development time could be reduced by 50\%.}
       \resumeItemListEnd
@@ -196,18 +212,19 @@
           $|$ \emph{5-person Capstone project - MATLAB, Simulink}
           }{Sept. 2023 -- Present}
           \resumeItemListStart
-            \resumeItem{Derived equations of motion for a single drive wheel robot and characterized as a linearized time-invariant system for our control algorithm.}
-            \resumeItem{Developed Simulink model to facilitate Software-in-the-Loop testing of our control model.}
+            \resumeItem{Derived equations of motion using Lagrangian mechanics to model the dynamics of a uni-wheeled robot.}
+            \resumeItem{Developed 3D simulation environment to facilitate SIL (software in the loop) testing of control algorithms.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Autonomous Wheeled Robot}
           $|$ \emph{4 person project - C/C++, OnShape}
           }{May 2021 -- Aug. 2021}
           \resumeItemListStart
-            \resumeItem{Designed the CAD model, circuit boards, and wrote the firmware in C for a wheeled robot to navigate a course to pick up items autonomously.}
+            \resumeItem{Designed the chassis, H-Bridge PCBs, and firmware for a wheeled robot to autonomously navigate a course to pick up items autonomously.}
             \resumeItem{Fabricated robot using sheet metal parts, laser-cut hardboard, and 3D-printed components.}
-            \resumeItem{Assembled, soldered, and tested custom-designed printed circuit boards for power distribution and drive control.}
+            \resumeItem{Assembled, soldered, and tested custom PCBs for power distribution and drive control.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
+
 
 \end{document}
