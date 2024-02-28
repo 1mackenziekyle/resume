@@ -116,7 +116,6 @@
     \centerline{\includegraphics[width=\paperwidth]{head}}
     \textbf{\Huge \scshape Kyle Mackenzie} \\ \vspace{1pt}
     % \href[pdfnewwindow=true]{https://1mackenziekyle.github.io/personal-website/#}{\underline{portfolio}} $|$
-    \href{mailto:1mackenziekyle@gmail.com}{\underline{1mackenziekyle@gmail.com}} $|$
     \small \href{https://1mackenziekyle.github.io}{\underline{1mackenziekyle.github.io}} $|$
     \small \href{https://github.com/1mackenziekyle}{\underline{github.com/1mackenziekyle}} $|$
     \href{https://www.linkedin.com/in/kyle-mackenzie-url/}{\underline{linkedin.com/in/kyle-mackenzie-url}}  
@@ -160,17 +159,6 @@
 %-----------EXPERIENCE-----------
 \section{Relevant Experience}
   \resumeSubHeadingListStart
-    \resumeSubheading
-      {Battery Controls Systems Co-op}{September 2023 -- Present}
-      {Corvus Energy}{Richmond, BC}
-      \resumeItemListStart
-        \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
-        \resumeItem{Validated UKF (Unscented Kalman Filter) used in SOC (State of Charge) estimation algorithm.}
-        \resumeItem{Collected battery cell cycling data for SIL (software in the loop) testing of SOC algorithm.} 
-        \resumeItem{Developed coulomb-counting algorithm to validate SOC algorithm and track SOH (state of health) of cells.}
-        \resumeItem{Wrote automated test scripts in Python for the HIL (hardware in the loop) BMS test bench.}
-        \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
-      \resumeItemListEnd
   \resumeSubheading
       {Lead Drive Controls Firmware Developer}{Sep. 2022 -- Present}
       {UBC Formula Electric FSAE Design Team}{Vancouver, BC}
@@ -178,6 +166,17 @@
         \resumeItem{Researched vehicle control algorithms and designed a custom torque vectoring motor control algorithm, increasing cornering speed and decreasing lap times by 10\%.}
         \resumeItem{Implemented torque vectoring algorithm in C code on an STM32 microcontroller, communicating with inverters and other boards over a CAN Bus.}
         \resumeItem{Developed a Python API for non-software developers to easily interface with the team's STM32 controllers over UART to facilitate testing of circuit boards.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Battery Controls Systems Co-op}{September 2023 -- December 2023}
+      {Corvus Energy}{Richmond, BC}
+      \resumeItemListStart
+        \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
+        \resumeItem{Validated UKF (Unscented Kalman Filter) used in SOC (State of Charge) estimation algorithm.}
+        \resumeItem{Collected battery cell cycling test data and led SIL (software in the loop) testing of SOC algorithm.} 
+        \resumeItem{Developed coulomb-counting algorithm to validate SOC algorithm and track SOH (state of health) of cells.}
+        \resumeItem{Wrote automated test scripts in Python for the HIL (hardware in the loop) BMS test bench.}
+        \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
       \resumeItemListEnd
     \resumeSubheading
       {Research Assistant}{May 2023 -- Aug. 2023}
@@ -213,9 +212,9 @@
           $|$ \emph{4 person project - C/C++, OnShape}
           }{May 2021 -- Aug. 2021}
           \resumeItemListStart
-            \resumeItem{Designed the chassis, H-Bridge PCBs, and firmware for a wheeled robot to autonomously navigate a course to pick up items autonomously.}
-            \resumeItem{Fabricated robot using sheet metal parts, laser-cut hardboard, and 3D-printed components.}
-            \resumeItem{Assembled, soldered, and tested custom PCBs for power distribution and drive control.}
+            \resumeItem{Led CAD design of a wheeled DC-motor-drive robot using OnShape.}
+            \resumeItem{Designed, assembled, and solderd H-Bridge PCBs for bi-directional control of brushed DC motors.}
+            \resumeItem{Wrote motor driver firmware in C and deployed on an STM32 Blue Pill controller for all sensor reading and motor actuation on robot.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
