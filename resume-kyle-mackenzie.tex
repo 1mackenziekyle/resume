@@ -44,9 +44,9 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
 
@@ -130,15 +130,14 @@
 %
 %----------- SKILLS -----------
 \section{Technical Skills}
-\begin{center}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}cccc}
-        \textbf{Software} & \textbf{Controls} & \textbf{Electrical} & \textbf{Mechanical} \\
-        % Python  C/C++, MATLAB \& Simulink, Controls \& Modelling, Linux & BMS modelling, State of Charge estimation & Analog circuits, PCB design & Power Tools, Lathe \& Mill \\
-        Python, C/C++ & State Estimation & Altium & CAD Design \\
-        UART, SPI, I2C, CAN & Motor Controls & Fourier Analysis & Lathe \& Mill \\
-        OS Fundamentals & Thermal Modelling & PCB Assembly & Waterjet \& Laser Cutting \\
-    \end{tabular*}
-\end{center}
+
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Software}{: FreeRTOS, STM32 Firmware, Operating Systems, Python (numpy, pandas, scipy, tensorflow) }\\
+     \textbf{Modelling \& Controls}{: Laplace-domain physical system modelling, Simulink, Vehicle Dynamics, BLDC motor controls} \\
+     \textbf{Tools/Environments}{: Git, Docker, Linux, Bash scripting, Data wrangling \& automation} \\
+    }}
+ \end{itemize}
 
 \vspace{-7mm}
 
@@ -150,41 +149,39 @@
   \resumeSubHeadingListStart
 \vspace{1mm}
   \resumeSubheading
-      {Vehicle Dynamics Lead}{June 2024 -- Present}
+      {Vehicle Dynamics \& Controls Team Lead}{June 2024 -- Present}
       {UBC Formula Electric FSAE Design Team}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Leading the design, requirements, and implementation of quad-motor torque vectoring drive algorithm.}
+        \resumeItem{Leading the research \& design of quad-motor torque vectoring drive algorithm, utilizing state-of-the-art sensor fusion, cornering response design, and four-wheel slip control.}
+        \resumeItem{Building a physics-based dynamics model of the car in MATLAB Simulink to enable SIL testing of controls algorithms, to evaluate stability and performance of the controller, and greatly reduce required on-car testing time.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
       {Reliability Test Engineer Co-op}{May 2024 -- Present}
       {Corvus Energy}{Richmond, BC}
       \resumeItemListStart
-        \resumeItem{Analyzed failure modes for power-path connectors and developed a test plan to isolate for selected mode.}
-        \resumeItem{Researched reliability testing, estimated parameters to calculate required cycles to emulate the product lifespan.}
-        \resumeItem{Crimped, bolted, and torqued bolted voltatge pickup connections and thermocouples, and conected DAQ system, managing hundreds of cables in a clean manner.}
-        \resumeItem{Wrote product certification test plans for vibrational test and thermal cycling test for a 9.5kWh battery module.}
-        \resumeItem{Designed and tested plumbing system for validating product's liquid cooling system under vibrational stress.}
+        \resumeItem{Developed a test plan to isolate a single failure mode for power-path connectors.}
+        \resumeItem{Crimped, bolted, and torqued bolted voltage pickup connections and thermocouples, and connected DAQ system, managing hundreds of cables in a clean manner.}
+        \resumeItem{Operated a 750A cycling station to execute test over the span of multiple months.}
+        \resumeItem{Used python to perform data analysis to characterize reliability of components, and reported findings to multiple executives.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
-      {Battery Controls Systems Co-op}{September 2023 -- December 2023}
-      {Corvus Energy}{}
+      {Battery Controls Systems Co-op}{Sept. 2023 -- Dec. 2023}
+      {Corvus Energy}{Richmond, BC}
       \resumeItemListStart
         \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
-        \resumeItem{Validated UKF (Unscented Kalman Filter) used in SOC (State of Charge) estimation algorithm.}
-        \resumeItem{Collected battery cell cycling data for SIL (software in the loop) testing of SOC algorithm.} 
         \resumeItem{Developed coulomb-counting algorithm to validate SOC algorithm and track SOH (state of health) of cells.}
+        \resumeItem{Collected battery cell cycling data for SIL (software in the loop) testing of SOC algorithm.} 
         \resumeItem{Wrote automated test scripts in Python for the HIL (hardware in the loop) BMS test bench.}
         \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
       \resumeItemListEnd
 \vspace{1mm}
   \resumeSubheading
-      {Drive Controls Firmware Member}{Sep. 2022 -- June 2024}
+      {Drive Controls Firmware Member}{Sept. 2022 -- June 2024}
       {UBC Formula Electric FSAE Design Team}{Vancouver, BC}
       \resumeItemListStart
-        \resumeItem{Researched vehicle control algorithms and designed a custom torque vectoring algorithm, improving handling and acceleration.}
-        \resumeItem{Implemented torque vectoring algorithm in C code on an STM32 microcontroller, communicating with inverters and other boards over a CAN bus.}
+        \resumeItem{Researched vehicle control algorithms and designed, wrote, and deployed a custom torque vectoring algorithm, improving handling and acceleration by 10\%.}
         \resumeItem{Developed a Python API for non-software developers to easily interface with the team's STM32 controllers over UART to facilitate testing of circuit boards.}
       \resumeItemListEnd
 \vspace{1mm}
@@ -193,7 +190,6 @@
       {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{Vancouver, BC}
       \resumeItemListStart
         \resumeItem{Optimized a MATLAB implementation of CPCA, a regressive dimension-reduction algorithm, to handle GB of brain fMRI data, measuring brain activation and classifying functional brain networks.}
-        \resumeItem{Developed MATLAB report generation script to display and analyze results of algorithm. }
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -203,11 +199,10 @@
     \resumeSubHeadingListStart
         \resumeProjectHeading
           {\textbf{Uni-wheeled Robot Drive Controls}
-          $|$ \emph{5-penrson Capstone project - MATLAB, Simulink}
+          $|$ \emph{5-person Capstone project - MATLAB, Simulink}
           }{Sept. 2023 -- Present}
           \resumeItemListStart
-            \resumeItem{Led the integration and troubleshooting of open-source BLDC motor driver boards.}
-            \resumeItem{Developed a 100Hz PID controller to run on a Jetson Nano, which communicates with the motor drivers, to balance an inverted pendulum for upwards of 30 seconds. }
+            \resumeItem{Developed a 100Hz PID controller to run on a Jetson Nano, which communicates with the motor drivers, to successfully balance an inverted pendulum indefinitely, using custom PID, RL, and LQR controllers. }
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Autonomous Wheeled Robot}
@@ -224,12 +219,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of British Columbia}{Vancouver, BC}
-      {Engineering Physics}{Sep. 2020 - May 2026 (Expected Graduation Date)}
-%       \begin{itemize}[leftmargin=0in, label={}]
-%     \small{\item{
-%      \textbf{Coursework}{: Software Design, Microcomputers, Signals and Systems, Machine Learning, Calculus, PDEs.} \\
-%     }}
-%  \end{itemize}
+      {Engineering Physics}{Sept. 2020 - May 2026}
   \resumeSubHeadingListEnd
 
 \vspace{-3mm}
