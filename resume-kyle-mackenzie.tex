@@ -139,87 +139,92 @@
     }}
  \end{itemize}
 
-\vspace{-7mm}
+\vspace{-4mm}
 
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{OS161 Operating Systems Kernel Development \href{https://1mackenziekyle.github.io/os.html}{(\underline{link})}}
+          $|$ \emph{C}
+          }{Sept. 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented high-level synchronization primitives such as locks, condition variables, and semaphores, which were later used 
+            to implement thread-safe system calls, a file system, and virtual memory.}
+            \resumeItem{Designed and implemented a thread-safe file system architecture to support file-related syscalls such as open, close, dup2, and more. (more details in personal website)}
+            \resumeItem{Implemented a virtual memory system that manages a page table to keep track of the state of RAM pages, 
+            and a TLB to cache page table entries. Additionally implemented swap-space support.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Uni-wheeled Robot Drive Controls \href{https://1mackenziekyle.github.io/learning-to-balance.html}{(\underline{link})}}
+          $|$ \emph{Python}
+          }{Sept. 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Derived non-linear equations of motion for 3-axis wheeled unicycle robot using Lagrangian Mechanics.}
+            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and reinforcement-learning controllers.}
+            \resumeItem{Developed the cost function for an LQR controller, and subsequently obtained the linearized motor controller to balance the robot upright.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
+          $|$ \emph{Python}
+          }{Jan. 2023 -- Apr. 2023}
+          \resumeItemListStart
+            \resumeItem{Derived non-linear equations of motion for 3-axis wheeled unicycle robot using Lagrangian Mechanics.}
+            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and reinforcement-learning controllers.}
+            \resumeItem{Developed the cost function for an LQR controller, and subsequently obtained the linearized motor controller to balance the robot upright.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\vspace{3mm}
 
 %-----------EXPERIENCE-----------
 \section{Relevant Experience}
   \resumeSubHeadingListStart
 \vspace{1mm}
   \resumeSubheading
-      {Vehicle Dynamics \& Controls Team Lead}{June 2024 -- Present}
-      {UBC Formula Electric FSAE Design Team}{Vancouver, BC}
+      {Vehicle Dynamics \& Controls Developer \& Team Lead}{Sept. 2022 -- Dec. 2024}
+      {UBC Formula Electric FSAE Design Team}{}
       \resumeItemListStart
-        \resumeItem{Leading the research \& design of quad-motor torque vectoring drive algorithm, utilizing state-of-the-art sensor fusion, cornering response design, and four-wheel slip control.}
-        \resumeItem{Building a physics-based dynamics model of the car in MATLAB Simulink to enable SIL testing of controls algorithms, to evaluate stability and performance of the controller, and greatly reduce required on-car testing time.}
+        \resumeItem{Led the research \& design of quad-motor torque vectoring drive algorithm, utilizing state-of-the-art sensor fusion, cornering response design, and four-wheel slip control.}
+        \resumeItem{Built a physics-based dynamics model of the car in MATLAB Simulink, to evaluate stability and performance of the controller, and allow year-wide testing, instead 
+        of simply during Summer months, improving prototype cycle.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
-      {Reliability Test Engineer Co-op}{May 2024 -- Present}
-      {Corvus Energy}{Richmond, BC}
+      {Reliability Test Engineer Co-op}{May 2024 -- Aug. 2024}
+      {Corvus Energy}{}
       \resumeItemListStart
-        \resumeItem{Developed a test plan to isolate a single failure mode for power-path connectors.}
-        \resumeItem{Crimped, bolted, and torqued bolted voltage pickup connections and thermocouples, and connected DAQ system, managing hundreds of cables in a clean manner.}
-        \resumeItem{Operated a 750A cycling station to execute test over the span of multiple months.}
-        \resumeItem{Used python to perform data analysis to characterize reliability of components, and reported findings to multiple executives.}
+        \resumeItem{Developed a certification-level test plan to isolate a single failure mode for power-path connectors.}
+        \resumeItem{Crimped, bolted, and torqued bolted voltage pickup connections.}
+        \resumeItem{Performed an analysis on test data to numerically characterize the reliability of busbar components, providing the company with concrete data supporting the lifespan reliabiltiy of our product.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
       {Battery Controls Systems Co-op}{Sept. 2023 -- Dec. 2023}
-      {Corvus Energy}{Richmond, BC}
+      {Corvus Energy}{}
       \resumeItemListStart
         \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
-        \resumeItem{Developed coulomb-counting algorithm to validate SOC algorithm and track SOH (state of health) of cells.}
-        \resumeItem{Collected battery cell cycling data for SIL (software in the loop) testing of SOC algorithm.} 
-        \resumeItem{Wrote automated test scripts in Python for the HIL (hardware in the loop) BMS test bench.}
+        \resumeItem{Developed coulomb-counting algorithm and automated test scripts to validate SOC algorithm and track cell health.}
         \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
-      \resumeItemListEnd
-\vspace{1mm}
-  \resumeSubheading
-      {Drive Controls Firmware Member}{Sept. 2022 -- June 2024}
-      {UBC Formula Electric FSAE Design Team}{Vancouver, BC}
-      \resumeItemListStart
-        \resumeItem{Researched vehicle control algorithms and designed, wrote, and deployed a custom torque vectoring algorithm, improving handling and acceleration by 10\%.}
-        \resumeItem{Developed a Python API for non-software developers to easily interface with the team's STM32 controllers over UART to facilitate testing of circuit boards.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
       {Research Assistant}{May 2023 -- Aug. 2023}
-      {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{Vancouver, BC}
+      {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{}
       \resumeItemListStart
-        \resumeItem{Optimized a MATLAB implementation of CPCA, a regressive dimension-reduction algorithm, to handle GB of brain fMRI data, measuring brain activation and classifying functional brain networks.}
+        \resumeItem{Streamlined a MATLAB implementation of CPCA, a 
+        regressive dimension-reduction algorithm 
+        to handle 10s of GB of brain fMRI data, and refactored into python
+         while removing over 300 lines of code and providing data visualization.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-
-%-----------PROJECTS-----------
-\section{Technical Projects}
-    \resumeSubHeadingListStart
-        \resumeProjectHeading
-          {\textbf{Uni-wheeled Robot Drive Controls}
-          $|$ \emph{5-person Capstone project - MATLAB, Simulink}
-          }{Sept. 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{Developed a 100Hz PID controller to run on a Jetson Nano, which communicates with the motor drivers, to successfully balance an inverted pendulum indefinitely, using custom PID, RL, and LQR controllers. }
-          \resumeItemListEnd
-      \resumeProjectHeading
-          {\textbf{Autonomous Wheeled Robot}
-          $|$ \emph{4 person project - C/C++, OnShape}
-          }{May 2021 -- Aug. 2021}
-          \resumeItemListStart
-            \resumeItem{Designed the circuit boards and firmware on a small wheeled robot to autonomously navigate a course.}
-            \resumeItem{Assembled, soldered, and tested custom PCBs for power distribution and control of two brushed DC motors.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
 
     %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of British Columbia}{Vancouver, BC}
-      {Engineering Physics}{Sept. 2020 - May 2026}
+      {University of British Columbia}{Sept. 2020 - May 2026}
+      {Engineering Physics}{}
   \resumeSubHeadingListEnd
 
 \vspace{-3mm}
