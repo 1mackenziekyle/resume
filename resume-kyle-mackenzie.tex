@@ -135,50 +135,25 @@
     \small{\item{
      \textbf{Software}{: FreeRTOS, STM32 Firmware, Operating Systems, Python (numpy, pandas, scipy, tensorflow) }\\
      \textbf{Modelling \& Controls}{: Laplace-domain physical system modelling, Simulink, Vehicle Dynamics, BLDC motor controls} \\
-     \textbf{Tools/Environments}{: Git, Docker, Linux, Bash scripting, Data wrangling \& automation} \\
+      \textbf{Tools/Environments}{: CAN, MODBUS, RS-485, Git, Docker, Linux, Bash scripting, Data wrangling \& automation} \\
     }}
  \end{itemize}
 
 \vspace{-4mm}
 
-%-----------PROJECTS-----------
-\section{Technical Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{OS161 Operating Systems Kernel Development \href{https://1mackenziekyle.github.io/os.html}{(\underline{link})}}
-          $|$ \emph{C}
-          }{Sept. 2024 -- Dec. 2024}
-          \resumeItemListStart
-            \resumeItem{Implemented high-level synchronization primitives such as locks, condition variables, and semaphores, which were later used 
-            to implement thread-safe system calls, a file system, and virtual memory.}
-            \resumeItem{Designed and implemented a thread-safe file system architecture to support file-related syscalls such as open, close, dup2, and more. (more details in personal website)}
-            \resumeItem{Implemented a virtual memory system that manages a page table to keep track of the state of RAM pages, 
-            and a TLB to cache page table entries. Additionally implemented swap-space support.}
-          \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{Uni-wheeled Robot Drive Controls \href{https://1mackenziekyle.github.io/learning-to-balance.html}{(\underline{link})}}
-          $|$ \emph{Python}
-          }{Sept. 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{Derived non-linear equations of motion for 3-axis wheeled unicycle robot using Lagrangian Mechanics.}
-            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and reinforcement-learning controllers.}
-            \resumeItem{Developed the cost function for an LQR controller, and subsequently obtained the linearized motor controller to balance the robot upright.}
-          \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
-          $|$ \emph{Python}
-          }{Jan. 2023 -- Apr. 2023}
-          \resumeItemListStart
-            \resumeItem{Developed a novel SAIL (Selective Aggregation for Imitation Learning) method to improve dataset efficiency for imitation learning, selectively adding only informative training samples to enhance model performance.}
-            \resumeItem{Designed and trained a custom CNN for character recognition using OpenCV-based preprocessing techniques, including binary masking, perspective warping, and data augmentation for robust license plate identification.}
-            \resumeItem{Implemented a self-driving control model in a ROS-based simulation, optimizing trajectory learning with expert-labeled datasets and debugging tools to refine navigation accuracy.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
-
 
 %-----------EXPERIENCE-----------
 \section{Relevant Experience}
   \resumeSubHeadingListStart
+  \resumeSubheading
+    {BMS Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
+    {Moment Energy}{}
+    \resumeItemListStart
+      \resumeItem{Implemented and debugged Sunspec Modbus API on an ESP32-based battery pack controller, including RS-485 communication troubleshooting.}
+      \resumeItem{Overhauled fault-logging architecture in BMS firwmare: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings. Designed, developed, tested, and merged.}
+      \resumeItem{Added a clang format C-style formatting tool to the Texas Instruments IDE, standardizing code style and removing the need for code-style comments on pull requests, thereby speeding up the development cycle.}
+      \resumeItem{Developed a CAN tool to emulate the behavior of another circuit board, greatly reducing the testing workflow time for pull requests.}
+    \resumeItemListEnd
 \vspace{1mm}
   \resumeSubheading
       {Vehicle Dynamics \& Controls Developer \& Team Lead}{Sept. 2022 -- Dec. 2024}
@@ -207,24 +182,47 @@
         \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
       \resumeItemListEnd
 \vspace{1mm}
-    \resumeSubheading
-      {Research Assistant}{May 2023 -- Aug. 2023}
-      {Cognitive Neuroscience of Schizophrenia Lab, BC Children's Hospital}{}
-      \resumeItemListStart
-        \resumeItem{Streamlined a MATLAB implementation of CPCA, a 
-        regressive dimension-reduction algorithm 
-        to handle 10s of GB of brain fMRI data, and refactored into python
-         while removing over 300 lines of code and providing data visualization.}
-      \resumeItemListEnd
   \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Technical Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{OS161 Operating Systems Kernel Development \href{https://1mackenziekyle.github.io/os.html}{(\underline{link})}}
+          $|$ \emph{C}
+          }{Sept. 2024 -- Dec. 2024}
+          \resumeItemListStart
+            \resumeItem{Implemented high-level synchronization primitives such as locks, condition variables, and semaphores, which were later used 
+            to implement thread-safe system calls, a file system, and virtual memory.}
+            \resumeItem{Designed and implemented a thread-safe file system architecture to support file-related syscalls.}
+            \resumeItem{Implemented a virtual memory system that manages a page table to keep track of the state of RAM pages, 
+            and a TLB to cache page table entries. Additionally implemented swap-space support.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Capstone Project: Uni-wheeled Robot Drive Controls \href{https://1mackenziekyle.github.io/learning-to-balance.html}{(\underline{link})}}
+          $|$ \emph{Python}
+          }{Sept. 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity, one of three awards granted to capstone projects.}
+            \resumeItem{Led chassis design to incorporate mechanical design principles, focusing on modularity and rapid (dis)assembly to accelerate the prototype cycle.}
+            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and RL controllers.}
+          \resumeItemListEnd
+        \resumeProjectHeading
+          {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
+          $|$ \emph{Python}
+          }{Jan. 2023 -- Apr. 2023}
+          \resumeItemListStart
+            \resumeItem{Developed a novel SAIL (Selective Aggregation for Imitation Learning) method to improve dataset efficiency for imitation learning, selectively adding only informative training samples to enhance model performance.}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 
     %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {University of British Columbia}{Sept. 2020 - May 2026}
-      {Engineering Physics}{}
+      {Engineering Physics}{Sept. 2020 - May 2026}
+      {University of British Columbia}{}
   \resumeSubHeadingListEnd
 
 \vspace{-3mm}
