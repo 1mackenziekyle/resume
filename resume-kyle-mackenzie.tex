@@ -133,9 +133,9 @@
 
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Software}{: FreeRTOS, STM32 Firmware, Operating Systems, Python (numpy, pandas, scipy, tensorflow) }\\
-     \textbf{Modelling \& Controls}{: Laplace-domain physical system modelling, Simulink, Vehicle Dynamics, BLDC motor controls} \\
-      \textbf{Tools/Environments}{: CAN, MODBUS, RS-485, Git, Docker, Linux, Bash scripting, Data wrangling \& automation} \\
+     \textbf{Software}{: FreeRTOS, STM32 firmware development, operating systems development, Python \& data analysis }\\
+     \textbf{Modelling \& Controls}{: Laplace-domain physical system modelling, Simulink, vehicle dynamics, BLDC motor controls} \\
+      \textbf{Tools/Environments}{: CAN, MODBUS, RS-485, Git, Docker, Linux (Debian and Arch), Bash scripting} \\
     }}
  \end{itemize}
 
@@ -146,22 +146,22 @@
 \section{Relevant Experience}
   \resumeSubHeadingListStart
   \resumeSubheading
-    {BMS Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
+    {Battery Management Systems Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
     {Moment Energy}{}
     \resumeItemListStart
-      \resumeItem{Implemented and debugged Sunspec Modbus API on an ESP32-based battery pack controller, including RS-485 communication troubleshooting.}
-      \resumeItem{Overhauled fault-logging architecture in BMS firmware: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings. Designed, developed, tested, and merged.}
-      \resumeItem{Added a clang format C-style formatting tool to the Texas Instruments IDE, standardizing code style and removing the need for code-style comments on pull requests, thereby speeding up the development cycle.}
-      \resumeItem{Developed a CAN tool to emulate the behavior of another circuit board, greatly reducing the testing workflow time for pull requests.}
+      \resumeItem{Redesigned and reworked fault-logging architecture in BMS firmware: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings. Designed, developed, tested, and merged.}
+      \resumeItem{Implemented and debugged the Sunspec Modbus API on an ESP32-based battery pack controller, utilizing the RS-485 protocol.}
+      \resumeItem{Led the research and proof-of-concept of an integration of the clang-format C-style formatting tool to the Texas Instruments IDE, standardizing code style and removing the need for code-style comments on pull requests, thereby speeding up the development cycle.}
+      \resumeItem{Developed and shared a testing tool to emulate the CAN messages sent by a component of the product under different fault scenarios, creating a comprehensive test suite which greatly reduced the testing workflow time for code changes.}
     \resumeItemListEnd
 \vspace{1mm}
   \resumeSubheading
       {Vehicle Dynamics \& Controls Developer \& Team Lead}{Sept. 2022 -- Dec. 2024}
       {UBC Formula Electric FSAE Design Team}{}
       \resumeItemListStart
-        \resumeItem{Led the research \& design of quad-motor torque vectoring drive algorithm, utilizing state-of-the-art sensor fusion, cornering response design, and four-wheel slip control.}
-        \resumeItem{Built a physics-based dynamics model of the car in MATLAB Simulink, to evaluate stability and performance of the controller, and allow year-wide testing, instead 
-        of simply during Summer months, improving prototype cycle.}
+        \resumeItem{Led the research and design of four-motor torque vectoring drive algorithm comprised of a sensor fusion algorithm for wheel slip estimation and a cornering response design.}
+        \resumeItem{Built a foundations of a physics-based dynamics model of the car in MATLAB Simulink, to evaluate stability and performance of the controller, and allow year-wide testing, instead of only during Summer months.}
+        \resumeItem{Designed and implemented the first iteration of a software differential for the dual-motor car to improve cornering.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
@@ -169,17 +169,21 @@
       {Corvus Energy}{}
       \resumeItemListStart
         \resumeItem{Developed a certification-level test plan to isolate a single failure mode for power-path connectors.}
-        \resumeItem{Crimped, bolted, and torqued bolted voltage pickup connections.}
-        \resumeItem{Performed an analysis on test data to numerically characterize the reliability of busbar components, providing the company with concrete data supporting the lifespan reliability of our product.}
+        \resumeItem{Assembled the electrical setup for the busbar components testing including wiring harnessing of busbars and voltage and temperature sensors, and mechanical assembly of the test chamber.}
+        \resumeItem{Analyzed test data to characterize the fatigue failure of busbar components, providing the company with concrete data supporting the lifespan reliability of the product.}
+        \resumeItem{Extrapolated test data and compared with in-field data to get a reliability estimate for deployed battery systems.}
+        \resumeItem{Led meetings while supervisor was away discussing results with senior engineers to make a decision on next steps and key findings.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
       {Battery Controls Systems Co-op}{Sept. 2023 -- Dec. 2023}
       {Corvus Energy}{}
       \resumeItemListStart
-        \resumeItem{Developed a thermal model in Simulink of the precharge circuit of a 1MWh energy storage system.}
-        \resumeItem{Developed coulomb-counting algorithm and automated test scripts to validate SOC algorithm and track cell health.}
-        \resumeItem{Developed a PCB to emulate temperature sensors to extend test coverage for a battery cell test bench.}
+        \resumeItem{Tested hardware and software for release of a safety-critical battery management system software version.}
+        \resumeItem{Developed a thermal model of the pre-charge system of the battery pack to control the pre-charge current.}
+        \resumeItem{Streamlined the battery cell data collection process for Lithium-ion cell state-of-health degradation and automated test scripts to validate SOC estimation algorithm.}
+        \resumeItem{Extended test coverage of a hardware-in-the-loop test bench for the battery management system software by implementing the wire harnessing of new sensors and writing new test cases.}
+        \resumeItem{Assisted in the design of a thermistor emulation PCB to extend test coverage of the battery cell simulator test bench.}
       \resumeItemListEnd
 \vspace{1mm}
   \resumeSubHeadingListEnd
@@ -221,7 +225,7 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Engineering Physics}{Sept. 2020 - May 2026}
+      {Bachelor's of Applied Science (Engineering) in Engineering Physics}{Sept. 2020 - May 2026}
       {University of British Columbia}{}
   \resumeSubHeadingListEnd
 
