@@ -133,9 +133,10 @@
 
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Software}{: Strong proficiency in C/C++, Python for testing \& tooling, real-time systems, operating systems development, embedded systems architecture, hardware-software interfaces. }\\
-     \textbf{Modelling \& Controls}{: Battery SOC \& SOH, vehicle dynamics, BLDC motor controls.} \\
-      \textbf{Tools/Environments}{: STM32, FreeRTOS, ESP32, Git version control, Linux development environments (Debian and Arch), Bash scripting, debugging with oscilloscopes \& logic analyzers.} \\
+     \textbf{Software: }{Strong proficiency in C/C++, Python for testing \& tooling, real-time systems, operating systems development, embedded systems \& hardware-software interfaces. }\\
+     \textbf{Networking: }{Transport \& Application-layer concepts: TCP/UDP, DHCP, DNS, gateway configuration. }\\
+      \textbf{Hardware/Environments: }{STM32, FreeRTOS, ESP32, Git, FPGA development in VHDL, Linux development (Debian \& Arch), Bash scripting, debugging with oscilloscopes \& logic analyzers, reading IC \& sensor datasheets \& electronic schematics.} \\
+     \textbf{Modelling \& Controls: }{Battery SOC \& SOH, vehicle dynamics, BLDC motor controls.} \\
     }}
  \end{itemize}
 
@@ -149,13 +150,14 @@
     {Battery Management Systems Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
     {Moment Energy}{}
     \resumeItemListStart
-      \resumeItem{Redesigned and reworked fault-logging architecture in BMS firmware: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings in C++/ESP32-based battery management system.}
+      \resumeItem{Redesigned and reworked fault-logging architecture in BMS firmware: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings in C++/ESP32-based battery management system (3000+ line PR).}
       \resumeItem{Documented all code changes in a write-up including architectural overview, functional changes, and testing procedure for review and approval by coworkers and supervior.}
-      \resumeItem{Completed code reviews on coworkers' pull requests, leaving comments on code style, safety, coverage, and testing procedure.}
+      \resumeItem{Completed code reviews on ESP32 and TI code, inspecting style, safety, branch coverage, and testing procedure.}
+      \resumeItem{Built an automated HIL test suite which simulated a suite of hardware fault scenarios, greatly reducing testing time.}
       \resumeItem{Led design review meetings with supervisor for architectural decisions on large code changes.}
-      \resumeItem{Implemented and debugged the Sunspec Modbus API on an ESP32-based battery pack controller, utilizing the RS-485 protocol.}
-      \resumeItem{Led the research and proof-of-concept of an integration of the clang-format C-style formatting tool to the Texas Instruments IDE, standardizing code style and removing the need for code-style comments on pull requests, thereby speeding up the development cycle.}
-      \resumeItem{Developed and shared a testing tool to emulate the CAN messages sent by a component of the product under different fault scenarios, creating a comprehensive test suite which greatly reduced the testing workflow time for code changes.}
+      \resumeItem{Fixed and reworked Modbus functionality on an ESP32-based battery pack controller, utilizing the RS-485 protocol and debugging at software and hardware level by inspecting IC datasheets and using a logic analyzer on PCB, isolating the source of failure (hardware) and root cause.}
+      \resumeItem{Implemented Modbus TCP platform on-site as a proof-of-concept for the product, while learning Transport and Application-layer networking fundamentals including TCP/UDP protocol, DHCP configuration and Static IP assignment, DNS configuration, and using NetIF and LwIP libraries.}
+      \resumeItem{Developed and shared a CAN-based HIL testing tool (python) to simulate behavior of boards under different fault scenarios, creating a comprehensive test suite which greatly reduced the testing workflow time for code changes.}
     \resumeItemListEnd
 \vspace{1mm}
   \resumeSubheading
@@ -163,8 +165,10 @@
       {UBC Formula Electric FSAE Student Design Team}{}
       \resumeItemListStart
         \resumeItem{Led the research and design of four-motor torque vectoring drive algorithm comprised of a sensor fusion algorithm for wheel slip estimation and a cornering response design on an STM32/FreeRTOS-based firmware system.}
+        \resumeItem{Integrated AMRAX inverters, inspecting datasheets and ensuring proper setup, calibration, and operation with STM32 board.}
+        \resumeItem{Developed C firmware for STM32 using datasheets, and reading PCB schematics for proper pin configuration and operation with electronic sensors and components.}
         \resumeItem{Built a foundations of a physics-based dynamics model of the car in MATLAB Simulink, to evaluate stability and performance of the controller, and allow year-wide testing.}
-        \resumeItem{Designed and implemented the first iteration of a software differential for the dual-motor car to improve cornering.}
+        \resumeItem{Designed and implemented the first iteration of a software differential for the dual-motor car to reduce lap time in cornering test by 15-20\%.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
@@ -194,6 +198,17 @@
 %-----------PROJECTS-----------
 \section{Technical Projects}
     \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Capstone Project: Uni-wheeled Robot Drive Controls \href{https://1mackenziekyle.github.io/learning-to-balance.html}{(\underline{link})}}
+          $|$ \emph{Python}
+          }{Sept. 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity, one of three awards granted to capstone projects.}
+            \resumeItem{Led chassis design to incorporate mechanical design principles, focusing on modularity and rapid (dis)assembly to accelerate the prototype cycle.}
+            \resumeItem{Evaluated and selected electrical and mechanical components including brushless DC motor, evaluating cost and torque-to-weight ratio.}
+            \resumeItem{Brought up and troubleshot BLDC motor driver board, reading PCB schematics, IC datasheets, and component datasheet for drivetrain electronics.}
+            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and RL controllers.}
+          \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{OS161 Operating Systems Kernel Development \href{https://1mackenziekyle.github.io/os.html}{(\underline{link})}}
           $|$ \emph{C}
@@ -204,15 +219,6 @@
             \resumeItem{Designed and implemented a thread-safe file system architecture to support 
             file-related functionality for a shared file system between multiple concurrent processes.}
             \resumeItem{ Implemented a virtual memory system that manages a page table to keep track of the state of RAM pages, and a TLB to cache page table entries.}
-          \resumeItemListEnd
-        \resumeProjectHeading
-          {\textbf{Capstone Project: Uni-wheeled Robot Drive Controls \href{https://1mackenziekyle.github.io/learning-to-balance.html}{(\underline{link})}}
-          $|$ \emph{Python}
-          }{Sept. 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity, one of three awards granted to capstone projects.}
-            \resumeItem{Led chassis design to incorporate mechanical design principles, focusing on modularity and rapid (dis)assembly to accelerate the prototype cycle.}
-            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and RL controllers.}
           \resumeItemListEnd
         \resumeProjectHeading
           {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
