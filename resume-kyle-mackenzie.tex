@@ -21,6 +21,7 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{array}
 \usepackage{graphicx}
 \input{glyphtounicode}
 
@@ -98,7 +99,7 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -117,8 +118,8 @@
     \textbf{\Huge \scshape Kyle Mackenzie} \\ \vspace{1pt}
     % \href[pdfnewwindow=true]{https://1mackenziekyle.github.io/personal-website/#}{\underline{portfolio}} $|$
     \href{mailto:1mackenziekyle@gmail.com}{\underline{1mackenziekyle@gmail.com}} $|$
-    \small \href{https://1mackenziekyle.github.io}{\underline{1mackenziekyle.github.io}} $|$
-    \small \href{https://github.com/1mackenziekyle}{\underline{github.com/1mackenziekyle}} $|$
+    \small \underline{+1(647)-641-7802} $|$
+    \small \href{https://1mackenziekyle.github.io}{\underline{personal website}} $|$
     \href{https://www.linkedin.com/in/kdmackenzie/}{\underline{linkedin.com/in/kdmackenzie}}  
    % $|$ \href{https://first.github.io/}{\underline{first.github.io}}
     
@@ -129,46 +130,50 @@
   
 %
 %----------- SKILLS -----------
+
 \section{Technical Skills}
+\vspace{-2pt}
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}l @{\hspace{4mm}} X@{}}
+Software & C/C++, Python, FreeRTOS, Operating Systems, Embedded Systems, CAN, I2C, SPI, UART \\
 
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Software: }{Strong proficiency in C/C++, Python for testing \& tooling, real-time systems, operating systems development, embedded systems \& hardware-software interfaces, CAN, I2C, SPI, UART. }\\
-     \textbf{Networking: }{Transport \& Application-layer concepts: TCP/UDP, DHCP, DNS, gateway configuration. }\\
-      \textbf{Hardware/Environments: }{STM32 \& microcontroller development and configuration (working with GPIO, ADC, PWM, timers, DMA, JTAG \& on-chip debugging), FreeRTOS, ESP32, Git, FPGA development in VHDL, Linux development (Debian \& Arch), Bash scripting, debugging with oscilloscopes \& logic analyzers, IC \& sensor datasheets, electronic schematics, inverter integration.} \\
-     \textbf{Modelling \& Controls: }{Battery SOC \& SOH, vehicle dynamics, BLDC motor controls.} \\
-    }}
- \end{itemize}
+Hardware & STM32, ESP32, JTAG \& On-chip Debugging, Git, FPGA (VHDL), Linux (Debian \& Arch), Bash \\
 
-\vspace{-4mm}
+Electrical & Electronic Schematics \& Datasheets, Oscilloscopes, Logic Analyzers \\
+
+Controls & Battery SOC \& SOH, Vehicle Dynamics, BLDC Motor Controls \\
+
+Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gateway Configuration \\
+
+\end{tabularx}
+
+\vspace{-2mm}
 
 
 %-----------EXPERIENCE-----------
 \section{Relevant Experience}
   \resumeSubHeadingListStart
   \resumeSubheading
-    {Battery Management Systems Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
+    {Battery Management Systems (BMS) Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
     {Moment Energy}{}
     \resumeItemListStart
-      \resumeItem{Redesigned and reworked fault-logging architecture in BMS firmware: Reconfigured non-volatile storage of system faults, fault severity levels, and CAN message handling for multi-frame fault strings in C++/ESP32-based battery management system (3000+ line PR).}
-      \resumeItem{Documented all code changes in a write-up including architectural overview, functional changes, and testing procedure for review and approval by coworkers and supervisor.}
-      \resumeItem{Completed code reviews on ESP32 and TI code, inspecting style, safety, branch coverage, and testing procedure.}
-      \resumeItem{Built an automated HIL test suite which simulated a suite of hardware fault scenarios, greatly reducing testing time.}
+      \resumeItem{Reworked fault-logging architecture in \textbf{C++/ESP32-based BMS firmware (3000+ line PR)}.}
+      \resumeItem{Documented all changes in write-up including architectural overview, functional changes, and testing procedure for review and approval by coworkers and supervisor.}
+      \resumeItem{Completed code reviews on \textbf{ESP32} and \textbf{TI} code, inspecting style, safety, branch coverage, and testing procedure.}
+      \resumeItem{Built a \textbf{hardware-in-the-loop (HIL) regression test suite} for all hardware fault cases, greatly reducing testing time.}
       \resumeItem{Led design review meetings with supervisor for architectural decisions on large code changes.}
-      \resumeItem{Fixed and reworked Modbus functionality on an ESP32-based battery pack controller, utilizing the RS-485 protocol and debugging at software and hardware level by inspecting IC datasheets and using a logic analyzer on PCB, isolating the source of failure (hardware) and root cause.}
-      \resumeItem{Implemented Modbus TCP platform on-site as a proof-of-concept for the product, while learning Transport and Application-layer networking fundamentals including TCP/UDP protocol, DHCP configuration and Static IP assignment, DNS configuration, and using NetIF and LwIP libraries.}
-      \resumeItem{Developed and shared a CAN-based HIL testing tool (python) to simulate behavior of boards under different fault scenarios, creating a comprehensive test suite which greatly reduced the testing workflow time for code changes.}
+      \resumeItem{Debugged, reworked Modbus: Inspected IC datasheets, probed PCB with \textbf{logic analyzer}, isolated root cause.}
+      \resumeItem{Implemented \textbf{Modbus TCP} platform  while learning \textbf{Transport and Application-layer networking fundamentals} (TCP/UDP protocol, DHCP configuration, Static IP assignment, DNS configuration, NetIF and LwIP libraries).}
+      \resumeItem{Developed \textbf{HIL testing tool (python)} simulating \textbf{CAN frames} for fault scenarios, greatly reducing testing time.}
     \resumeItemListEnd
 \vspace{1mm}
   \resumeSubheading
       {Vehicle Dynamics \& Controls Developer \& Team Lead}{Sept. 2022 -- Dec. 2024}
       {UBC Formula Electric FSAE Student Design Team}{}
       \resumeItemListStart
-        \resumeItem{Led the research and design of four-motor torque vectoring drive algorithm comprised of a sensor fusion algorithm for wheel slip estimation and a cornering response design on an STM32/FreeRTOS-based firmware system.}
-        \resumeItem{Integrated AMRAX inverters, inspecting datasheets and ensuring proper setup, calibration, and operation with STM32 board.}
-        \resumeItem{Developed C firmware for STM32 using datasheets, and reading PCB schematics for proper pin configuration and operation with electronic sensors and components.}
-        \resumeItem{Built the initial physics-based dynamics model of the car in MATLAB Simulink, to evaluate stability and performance of the controller, and allow year-wide testing.}
-        \resumeItem{Designed and implemented the first iteration of a software differential for the dual-motor car to reduce lap time in cornering test by 15-20\%.}
+        \resumeItem{Led the research, design, and implementation of \textbf{torque vectoring} drive algorithm comprised of a \textbf{sensor fusion} algorithm: Wheel slip sensor fusion, power limiting, and physics-based cornering response design on an STM32 running \textbf{FreeRTOS}, reducing average lap time by \textbf{15-20\%}.}
+        \resumeItem{Integrated \textbf{motor inverters}: Inspected datasheets, ensured proper setup, calibration, and operation with STM32 boards.}
+        \resumeItem{Configured STM32: Referenced \textbf{PCB schematic} for pin config. and operation with electronic sensors and components.}
+        \resumeItem{Built the initial \textbf{physics-based dynamics model} of the car in \textbf{MATLAB Simulink} with the suspension team, to evaluate stability and performance of the controller, and allow year-wide testing.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
@@ -177,9 +182,9 @@
       \resumeItemListStart
         \resumeItem{Developed a certification-level test plan to isolate a single failure mode for power-path connectors.}
         \resumeItem{Assembled the electrical setup for the busbar components testing including wiring harnessing of busbars and voltage and temperature sensors, and mechanical assembly of the test chamber.}
-        \resumeItem{Analyzed test data to characterize the fatigue failure of busbar components, providing the company with concrete data supporting the lifespan reliability of the product.}
-        \resumeItem{Extrapolated test data and compared with in-field data to get a reliability estimate for deployed battery systems.}
-        \resumeItem{Led meetings while supervisor was away discussing results with senior engineers to make a decision on next steps and key findings.}
+        \resumeItem{Completed a \textbf{fatigue failure analysis} of busbar components, providing the company with concrete data supporting the lifespan reliability of the product.}
+        \resumeItem{Extrapolated test data and compared with in-field data to get a \textbf{reliability estimate} for deployed battery systems.}
+        \resumeItem{Led meetings discussing results with senior engineers to make a decision on next steps and key findings.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
@@ -187,10 +192,10 @@
       {Corvus Energy}{}
       \resumeItemListStart
         \resumeItem{Tested hardware and software for release of a safety-critical battery management system software version.}
-        \resumeItem{Developed a thermal model of the pre-charge system of the battery pack to control the pre-charge current.}
-        \resumeItem{Streamlined the battery cell data collection process for Lithium-ion cell state-of-health degradation and automated test scripts to validate SOC estimation algorithm.}
-        \resumeItem{Carried out wire harnessing and test case development to extend test coverage of a BMS HIL test bench.}
-        \resumeItem{Assisted in the design of a thermistor emulation PCB to extend test coverage of the battery cell simulator test bench.}
+        \resumeItem{Developed a \textbf{thermal model of the pre-charge system} of the battery pack to control the pre-charge current.}
+        \resumeItem{Streamlined the battery cell data collection process for Lithium-ion cell \textbf{state-of-health estimation} algorithm and automated test scripts to validate \textbf{state-of-charge estimation} algorithm.}
+        \resumeItem{Carried out wire harnessing and test case development to extend test coverage of a \textbf{BMS HIL test bench}.}
+        \resumeItem{Assisted in the design of a \textbf{thermistor emulation PCB} to extend test coverage of the battery cell simulator test bench.}
       \resumeItemListEnd
 \vspace{1mm}
   \resumeSubHeadingListEnd
@@ -203,31 +208,31 @@
           $|$ \emph{Python}
           }{Sept. 2023 -- Apr. 2025}
           \resumeItemListStart
-            \resumeItem{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity, one of three awards granted to capstone projects.}
-            \resumeItem{Led chassis design to incorporate mechanical design principles, focusing on modularity and rapid (dis)assembly to accelerate the prototype cycle.}
-            \resumeItem{Evaluated and selected components including brushless DC motor, evaluating cost, peak cts. torque, and weight.}
-            \resumeItem{Brought up and troubleshot electrical issues with open-source BLDC motor driver board, reading PCB schematics, IC datasheets, and component datasheet for drivetrain electronics.}
+            \resumeItem{\textbf{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity}.}
+            \resumeItem{\textbf{Led chassis design} to incorporate mechanical design principles, focusing on \textbf{modularity and rapid (dis)assembly} to accelerate the prototype cycle.}
+            \resumeItem{Evaluated and selected components including \textbf{brushless DC (BLDC) motor}, evaluating cost, peak cts. torque, and weight.}
+            \resumeItem{Brought up and \textbf{troubleshot electrical issues} with open-source \textbf{BLDC motor driver board}, reading PCB schematics, IC datasheets, and component datasheet for drivetrain electronics.}
             \resumeItem{Troubleshot mechanical issues including vibrations under different wheel speeds, and revised mechanical design.}
-            \resumeItem{Brought up the software system on a Jetson Nano to facilitate the development of LQR, MPC, and RL controllers.}
+            \resumeItem{Brought up the software system on a \textbf{Jetson Nano} with a \textbf{real-time kernel patch (PREEMPT\_RT) and real-time C task scheduling in python} to enforce strict task scheduling and facilitate dvelopment of control algorithms.}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{OS161 Operating Systems Kernel Development \href{https://1mackenziekyle.github.io/os.html}{(\underline{link})}}
           $|$ \emph{C}
           }{Sept. 2024 -- Dec. 2024}
           \resumeItemListStart
-            \resumeItem{Implemented synchronization primitives including locks, condition variables, and semaphores, 
-            which were later used to implement thread-safe components of the operating system.}
+            \resumeItem{\textbf{Implemented synchronization primitives} including locks, condition variables, and semaphores, 
+            which were later used to \textbf{implement thread-safe components of the operating system}.}
             \resumeItem{Designed and implemented a thread-safe file system architecture to support 
             file-related functionality for a shared file system between multiple concurrent processes.}
-            \resumeItem{ Implemented a virtual memory system that manages a page table to keep track of the state of RAM pages, and a TLB to cache page table entries.}
+            \resumeItem{ \textbf{Implemented a virtual memory system} that manages a page table to keep track of the state of RAM pages, and a TLB to cache page table entries.}
           \resumeItemListEnd
         \resumeProjectHeading
           {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
           $|$ \emph{Python}
           }{Jan. 2023 -- Apr. 2023}
           \resumeItemListStart
-            \resumeItem{Developed a novel SAIL (Selective Aggregation for Imitation Learning) method to improve dataset efficiency for imitation learning, selectively adding only informative training samples to enhance model performance.}
-            \resumeItem{Designed the model architecture and trained a convolutional neural network on augmented text data in order to read text from different angles and lighting in the driving simulation.}
+            \resumeItem{Developed a novel SAIL (Selective Aggregation for Imitation Learning) method to \textbf{improve dataset efficiency} for imitation learning, selectively adding only informative training samples to \textbf{enhance model performance}.}
+            \resumeItem{\textbf{Designed the model architecture and trained a convolutional neural network} on augmented text data in order to read text from different angles and lighting in the driving simulation.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
@@ -236,8 +241,8 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Bachelor's of Applied Science (Engineering) in Engineering Physics}{Sept. 2020 -- May 2026}
-      {University of British Columbia}{}
+      {Bachelor's of Applied Science (Engineering) in Engineering Physics}{\textbf{3.3 GPA}}
+      {University of British Columbia, 2020 -- 2026}{}
   \resumeSubHeadingListEnd
 
 \vspace{-3mm}
