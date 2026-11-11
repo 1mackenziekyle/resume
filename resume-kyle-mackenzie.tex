@@ -134,11 +134,11 @@
 \section{Technical Skills}
 \vspace{-2pt}
 \begin{tabularx}{\textwidth}{@{}>{\bfseries}l @{\hspace{4mm}} X@{}}
-Software & C/C++, Python, FreeRTOS, Operating Systems, Embedded Systems, CAN, I2C, SPI, UART \\
+Software & C/C++, Python, Git, FreeRTOS, Operating Systems, Embedded Systems, CAN, I2C, SPI, UART \\
 
-Hardware & STM32, ESP32, JTAG \& On-chip Debugging, Git, FPGA (VHDL), Linux (Debian \& Arch), Bash \\
+Hardware & STM32, ESP32, JTAG \& On-chip Debugging, FPGA (VHDL), Linux (Debian \& Arch), Bash \\
 
-Electrical & Electronic Schematics \& Datasheets, Oscilloscopes, Logic Analyzers \\
+Electrical & Lithium-ion Battery Systems, Electronic Schematics \& Datasheets, Oscilloscopes, Logic Analyzers \\
 
 Controls & Battery SOC \& SOH, Vehicle Dynamics, BLDC Motor Controls \\
 
@@ -153,7 +153,7 @@ Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gatewa
 \section{Relevant Experience}
   \resumeSubHeadingListStart
   \resumeSubheading
-    {Battery Management Systems (BMS) Firmware Engineer Co-op}{May 2025 -- Aug. 2025}
+    {Battery Management Systems (BMS) Firmware Engineer Co-op (Internship)}{May 2025 -- Aug. 2025}
     {Moment Energy}{}
     \resumeItemListStart
       \resumeItem{Reworked fault-logging architecture in \textbf{C++/ESP32-based BMS firmware (3000+ line PR)}.}
@@ -162,7 +162,7 @@ Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gatewa
       \resumeItem{Built a \textbf{hardware-in-the-loop (HIL) regression test suite} for all hardware fault cases, greatly reducing testing time.}
       \resumeItem{Led design review meetings with supervisor for architectural decisions on large code changes.}
       \resumeItem{Debugged, reworked Modbus: Inspected IC datasheets, probed PCB with \textbf{logic analyzer}, isolated root cause.}
-      \resumeItem{Implemented \textbf{Modbus TCP} platform  while learning \textbf{Transport and Application-layer networking fundamentals} (TCP/UDP protocol, DHCP configuration, Static IP assignment, DNS configuration, NetIF and LwIP libraries).}
+      \resumeItem{Implemented \textbf{Modbus TCP} platform  while learning \textbf{Transport and Application-layer networking fundamentals}.}
       \resumeItem{Developed \textbf{HIL testing tool (python)} simulating \textbf{CAN frames} for fault scenarios, greatly reducing testing time.}
     \resumeItemListEnd
 \vspace{1mm}
@@ -170,29 +170,26 @@ Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gatewa
       {Vehicle Dynamics \& Controls Developer \& Team Lead}{Sept. 2022 -- Dec. 2024}
       {UBC Formula Electric FSAE Student Design Team}{}
       \resumeItemListStart
-        \resumeItem{Led the research, design, and implementation of \textbf{torque vectoring} drive algorithm comprised of a \textbf{sensor fusion} algorithm: Wheel slip sensor fusion, power limiting, and physics-based cornering response design on an STM32 running \textbf{FreeRTOS}, reducing average lap time by \textbf{15-20\%}.}
+        \resumeItem{Led the research, design, and implementation of \textbf{torque vectoring} drive algorithm comprised of wheel slip sensor fusion, power limiting, and a physics-based cornering design on an \textbf{STM32} running \textbf{FreeRTOS}, reducing lap time by \textbf{15-20\%}.}
         \resumeItem{Integrated \textbf{motor inverters}: Inspected datasheets, ensured proper setup, calibration, and operation with STM32 boards.}
         \resumeItem{Configured STM32: Referenced \textbf{PCB schematic} for pin config. and operation with electronic sensors and components.}
-        \resumeItem{Built the initial \textbf{physics-based dynamics model} of the car in \textbf{MATLAB Simulink} with the suspension team, to evaluate stability and performance of the controller, and allow year-wide testing.}
+        \resumeItem{Built the \textbf{physics-based dynamics model} of the car in \textbf{MATLAB Simulink} with the suspension team, to evaluate stability and performance of the controller, and allow year-wide testing.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
-      {Reliability Test Engineer Co-op}{May 2024 -- Aug. 2024}
+      {Reliability Test Engineer Co-op (Internship)}{May 2024 -- Aug. 2024}
       {Corvus Energy}{}
       \resumeItemListStart
         \resumeItem{Developed a certification-level test plan to isolate a single failure mode for power-path connectors.}
-        \resumeItem{Assembled the electrical setup for the busbar components testing including wiring harnessing of busbars and voltage and temperature sensors, and mechanical assembly of the test chamber.}
-        \resumeItem{Completed a \textbf{fatigue failure analysis} of busbar components, providing the company with concrete data supporting the lifespan reliability of the product.}
-        \resumeItem{Extrapolated test data and compared with in-field data to get a \textbf{reliability estimate} for deployed battery systems.}
+        \resumeItem{Assembled the electrical setup for the component tests including wiring harnessing components and sensors.}
+        \resumeItem{Completed a \textbf{fatigue failure analysis} of component, providing the company with concrete data supporting the reliability.}
         \resumeItem{Led meetings discussing results with senior engineers to make a decision on next steps and key findings.}
       \resumeItemListEnd
 \vspace{1mm}
     \resumeSubheading
-      {Battery Controls Systems Co-op}{Sept. 2023 -- Dec. 2023}
+      {Battery Controls Systems Co-op (Internship)}{Sept. 2023 -- Dec. 2023}
       {Corvus Energy}{}
       \resumeItemListStart
-        \resumeItem{Tested hardware and software for release of a safety-critical battery management system software version.}
-        \resumeItem{Developed a \textbf{thermal model of the pre-charge system} of the battery pack to control the pre-charge current.}
         \resumeItem{Streamlined the battery cell data collection process for Lithium-ion cell \textbf{state-of-health estimation} algorithm and automated test scripts to validate \textbf{state-of-charge estimation} algorithm.}
         \resumeItem{Carried out wire harnessing and test case development to extend test coverage of a \textbf{BMS HIL test bench}.}
         \resumeItem{Assisted in the design of a \textbf{thermistor emulation PCB} to extend test coverage of the battery cell simulator test bench.}
@@ -209,10 +206,10 @@ Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gatewa
           }{Sept. 2023 -- Apr. 2025}
           \resumeItemListStart
             \resumeItem{\textbf{Won the 2025 Eng Phys Project Fair Eric Roenitz Award for Ingenuity}.}
-            \resumeItem{\textbf{Led chassis design} to incorporate mechanical design principles, focusing on \textbf{modularity and rapid (dis)assembly} to accelerate the prototype cycle.}
-            \resumeItem{Evaluated and selected components including \textbf{brushless DC (BLDC) motor}, evaluating cost, peak cts. torque, and weight.}
-            \resumeItem{Brought up and \textbf{troubleshot electrical issues} with open-source \textbf{BLDC motor driver board}, reading PCB schematics, IC datasheets, and component datasheet for drivetrain electronics.}
+            \resumeItem{\textbf{Led chassis design}, focusing on \textbf{modularity and rapid (dis)assembly} for rapid iteration.}
             \resumeItem{Troubleshot mechanical issues including vibrations under different wheel speeds, and revised mechanical design.}
+            \resumeItem{Evaluated and selected \textbf{brushless DC (BLDC) motor}, evaluating cost, peak cts. torque, and weight.}
+            \resumeItem{Brought up and \textbf{troubleshot electrical issues} with open-source \textbf{BLDC motor driver board}, reading PCB schematics, IC datasheets, and component datasheet for drivetrain electronics.}
             \resumeItem{Brought up the software system on a \textbf{Jetson Nano} with a \textbf{real-time kernel patch (PREEMPT\_RT) and real-time C task scheduling in python} to enforce strict task scheduling and facilitate development of control algorithms.}
           \resumeItemListEnd
       \resumeProjectHeading
@@ -220,22 +217,23 @@ Networking & Transport \& Application-layer Concepts, TCP/UDP, DHCP, DNS, Gatewa
           $|$ \emph{C}
           }{Sept. 2024 -- Dec. 2024}
           \resumeItemListStart
-            \resumeItem{\textbf{Implemented synchronization primitives} including locks, condition variables, and semaphores, 
-            which were later used to \textbf{implement thread-safe components of the operating system}.}
-            \resumeItem{Designed and implemented a thread-safe file system architecture to support 
-            file-related functionality for a shared file system between multiple concurrent processes.}
+            \resumeItem{\textbf{Implemented synchronization primitives} including \textbf{locks, condition variables}, and \textbf{semaphores}, 
+            which were later used to implement thread-safe components of the operating system.}
+            \resumeItem{Designed architecture for and implemented a \textbf{thread-safe file system} supporting multiple processes.}
             \resumeItem{ \textbf{Implemented a virtual memory system} that manages a page table to keep track of the state of RAM pages and a TLB to cache page table entries.}
+            \resumeItem{\textbf{Achieved a 92\%} grade on the project, resulting in being invited to work on research with the professor.}
           \resumeItemListEnd
         \resumeProjectHeading
           {\textbf{Machine Learning Self-Driving \& Character Recognition \href{https://1mackenziekyle.github.io/machine-learning.html}{(\underline{link})}}
           $|$ \emph{Python}
           }{Jan. 2023 -- Apr. 2023}
           \resumeItemListStart
-            \resumeItem{Developed a novel SAIL (Selective Aggregation for Imitation Learning) method to \textbf{improve dataset efficiency} for imitation learning, selectively adding only informative training samples to \textbf{enhance model performance}.}
-            \resumeItem{\textbf{Designed the model architecture and trained a convolutional neural network} on augmented text data in order to read text from different angles and lighting in the driving simulation.}
+            \resumeItem{Trained an imitation-learning self-driving model using \textbf{my own novel data collection algorithm} SAIL (Selective Aggregation for Imitation Learning) to \textbf{improve dataset efficiency} for imitation learning.}
+            \resumeItem{Designed the model architecture and trained a \textbf{convolutional neural network} on augmented data read text in simulation.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
+\vspace{-8mm}
 
 %-----------EDUCATION-----------
 \section{Education}
